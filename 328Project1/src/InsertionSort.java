@@ -9,8 +9,8 @@ import java.util.*;
 public class InsertionSort 
 {
 	
-	public static LinkedList<Object> initLinkedList()
-	{
+	//public static LinkedList<Object> initLinkedList()
+	//{
 		//LinkedList<Object> linkedList = new LinkedList<>();
 		/*
 		linkedList.add("dan");
@@ -41,7 +41,7 @@ public class InsertionSort
 		
 		//return linkedList;
 		
-	}
+	//}
 	
 	/*
 	public static LinkedList<Object> sort()
@@ -57,8 +57,8 @@ public class InsertionSort
 	
 	public static void main (String [] Args)
 	{
-		LinkedList<Object> list = initLinkedList();
-		testPrint(list);
+		//LinkedList<Object> list = initLinkedList();
+		//testPrint(list);
 	}
 	
 }
