@@ -9,46 +9,28 @@ import java.util.*;
 public class InsertionSort 
 {
 	
-	//public static LinkedList<Object> initLinkedList()
-	//{
-		//LinkedList<Object> linkedList = new LinkedList<>();
-		/*
-		linkedList.add("dan");
-		linkedList.add("kelly");
-		linkedList.add("mat");
-		linkedList.add("katie");
-		linkedList.add("allen");
-		linkedList.add("daniel");
-		linkedList.add("farhan");
-		linkedList.add("louise");
-		linkedList.add("tom");
-		linkedList.add("carl");
-		linkedList.add("norbert");
-		linkedList.add("sally");
-		linkedList.add("mazen");
-		linkedList.add("hannah");
-		linkedList.add("mel");
-		linkedList.add("abby");
-		linkedList.add("james");
-		linkedList.add("carlos");
-		linkedList.add("cindy");
-		linkedList.add("chris");
-		linkedList.add("christie");
-		linkedList.add("chester");
-		linkedList.add("ralph");
-		*/
-		
-		
-		//return linkedList;
-		
-	//}
-	
-	/*
-	public static LinkedList<Object> sort()
+/*
+ *     public static int[] doInsertionSort(int[] input){
+         
+        int temp;
+        for (int i = 1; i < input.length; i++) {
+            for(int j = i ; j > 0 ; j--){
+                if(input[j] < input[j-1]){
+                    temp = input[j];
+                    input[j] = input[j-1];
+                    input[j-1] = temp;
+                }
+            }
+        }
+        return input;
+    }
+ */
+	public static void sort(linkedList list)
 	{
-		
+		Node temp;
+		//for (int i = 1; i < )
 	}
-	*/
+
 	
 	public static void testPrint(LinkedList<Object> list)
 	{
@@ -57,8 +39,19 @@ public class InsertionSort
 	
 	public static void main (String [] Args)
 	{
-		//LinkedList<Object> list = initLinkedList();
-		//testPrint(list);
+		linkedList list = new linkedList();
+		list.addToList("carl");
+		list.addToList("ryan");
+		list.addToList("bob");
+		list.addToList("daren");
+		list.addToList("louis");
+		list.addToList("dani");
+		int i = list.getLength();
+		System.out.println(i);
+		
+		sort(list);
+		
+		list.print();
 	}
 	
 }
@@ -103,7 +96,38 @@ class linkedList
 	{
 		Node tempNode = new Node();
 		tempNode.setNodeValue(s);
-		
+		if (head == null)
+		{
+			head = tempNode;
+			tail = tempNode;
+		}
+		else
+		{
+			tail.setNextNode(tempNode);
+			tail = tempNode;
+		}
+	}
+	
+	public int getLength()
+	{
+		int i = 0;
+		Node tempNode = head;
+		while (tempNode != null)
+		{
+			i++;
+			tempNode = tempNode.getNextNode();
+		}
+		return i;
+	}
+	
+	public void print()
+	{
+		Node tempNode = head;
+		while (tempNode != null)
+		{
+			System.out.println(tempNode.getNodeValue());
+			tempNode = tempNode.getNextNode();
+		}
 		
 	}
 	
